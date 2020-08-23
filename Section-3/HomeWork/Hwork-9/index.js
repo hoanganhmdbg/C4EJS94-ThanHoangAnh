@@ -8,5 +8,6 @@ while(i<colors.length){
     fd(fsize);
     rt(90);
   }
+  fsize += 50;
   i++;
 }
