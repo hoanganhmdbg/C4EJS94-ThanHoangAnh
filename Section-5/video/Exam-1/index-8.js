@@ -1,37 +1,44 @@
 let quizzes = [
     {
         question: 'How many legs do an optopus has',
-        choices: ['1. 4 legs', '2. no legs', '3. 8 legs', '4. 2 legs'],
-        rightChoice: 3,
+        choices: ['4 legs', 'no legs', '8 legs', '2 legs'],
+        rightChoice: '8 legs',
     },
     {
         question: 'Which country is home to the kangaroo',
-        choices: ['1. Australia', '2. Autria', '3. New zealand', '4. US'],
-        rightChoice: 1,
+        choices: ['Australia', 'Autria', 'New zealand', 'US'],
+        rightChoice: 'Australia',
     },
     {
         question: 'What sweet food made by bees using nectar from flowers?',
-        choices: ['1. Bread', '2. Honey', '3. Sugar', '4. Potent'],
-        correct: 2,
+        choices: ['Bread', 'Honey', 'Sugar', 'Potent'],
+        rightChoice: 'Honey',
     },
     {
         question: 'Which fictional detective lived at 221b Baker street',
-        choices: ['1. Watson', '2. Sam Spade', '3. Scubidu', '4.Sherlock Holmes'],
-        correct: 4,
+        choices: ['Watson', 'Sam Spade', 'Scubidu', 'Sherlock Holmes'],
+        rightChoice: 'Sherlock Holmes',
     }
 ];
+let count = 0;
 while(true){
     if(quizzes.length == 0){
         break;
     }
     let index = Math.floor(Math.random() * quizzes.length);
     let str = '';
-    while(true){
+    let indexRightChoice;
+    let i1 = 1;
+    while(true){      
         if(quizzes[index].choices.length == 0){
             break;
         }
         let i = Math.floor(Math.random() * quizzes[index].choices.length);
-        str += quizzes[index].choices[i] + '\n';
+        str +=`${i1}. ` + quizzes[index].choices[i] + '\n';
+        if(quizzes[index].choices[i] == quizzes[index].rightChoice){
+            indexRightChoice = i1;
+        }
+        i1++;
         quizzes[index].choices.splice(i,1);
     }
     let quizz = prompt(`${quizzes[index].question} \n ${str}`);
@@ -39,8 +46,9 @@ while(true){
         alert("You out!!");
         break;
     }
-    if(Number(quizz) == quizzes[index].rightChoice){
+    if(Number(quizz) == indexRightChoice){
         count++;
     }
     quizzes.splice(index,1);
 }
+alert(`you answered correctly ${count}`);
