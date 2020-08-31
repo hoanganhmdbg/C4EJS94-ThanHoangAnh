@@ -1,0 +1,16 @@
+div {
+    width: 500px;
+    height: 135px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR49BUmmqriay32qKwoMmYKn292pi_s71xRLQ&usqp=CAU);
+    background-size: 75px;
+    border: green 2px solid;
+}
+#first{
+    background-repeat: repeat-x;
+}
+#second{
+    background-repeat: repeat-y;
+}
+#third{
+    background-repeat: no-repeat;
+}
