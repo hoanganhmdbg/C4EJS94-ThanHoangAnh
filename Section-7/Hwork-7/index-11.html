@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="index-11.js"></script> -->
+</head>
+
+<body>
+    <input type="text" placeholder="Enter your name">
+    <button onclick="upper()">Upper it!!!</button>
+    <p>Your result will appear here</p>\
+    <script>
+        console.log(document.getElementsByTagName('button')[0]);
+        console.log(document.getElementsByTagName('input')[0]);
+        console.log(document.getElementsByTagName('p')[0]);
+        var text = document.getElementsByTagName('input')[0].value;
+        console.log(text);
+        function upper() {
+            text = text.toUpperCase();
+            console.log(text);
+            document.getElementsByTagName('p')[0].innerHTML = text;
+        }
+    </script>
+
+</body>
+
+</html>

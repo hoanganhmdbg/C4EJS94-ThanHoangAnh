@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="index-7.1.js"></script> -->
+</head>
+<body>
+    <button id="btn-click1">click1</button>
+    <button id="btn-click2">click2</button>
+    <script>
+        let btn1 = document.getElementById("btn-click1")
+        let btn2 = document.getElementById("btn-click2")
+        btn1.addEventListener('click', (e) => {
+            console.log(e.target);
+        });
+        btn2.addEventListener('click', (e) => {
+                console.log(e.target);
+            });
+    </script>
+</body>
+</html>

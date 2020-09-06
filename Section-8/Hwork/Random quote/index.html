@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <style>
+        .reload{
+            width: auto;
+            height: 100px;
+        }
+        .btn{
+            padding:10px 10px;
+            background-color: white;
+            border: none;
+            float: right;
+            margin: 30px;
+        }
+        i {
+            padding-right: 5px;
+        }
+        .btn:active{
+            border: 2px solid ;
+        }
+        .print{
+            
+            box-sizing: border-box;
+            margin-top: 50px;
+            clear: both;
+            margin: 0 auto;
+            padding: 200px 400px;
+            text-align: right;
+        }
+        #quote{
+            font-size: 20px;
+            font-family: sans-serif;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+    </style>
+</head>
+<body>
+    <script src="data.js"></script>
+    <div class= "reload">
+        <button class="btn" onclick="randomQuote()"><i class="fas fa-redo-alt"></i> Reload</button>
+    </div>
+    <div class="print">
+        <p id = "quote"></p>
+        <p id = "author"></p>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
