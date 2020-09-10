@@ -13,7 +13,10 @@
     </ul>
     <script>
         let a = document.getElementsByTagName("LI");
-        console.log(a[1].innerHTML); 
+        for (let i = 0; i < a.length; i++) {
+            console.log(a[i].innerHTML);
+            
+        }
     </script>
 </body>
 </html>

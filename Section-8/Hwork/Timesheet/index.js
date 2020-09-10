@@ -13,5 +13,5 @@ var a = document.getElementById('addProject').innerHTML;
 var b = document.getElementById('addTask').innerHTML;
 var c = document.getElementById('addTime').innerHTML;
 function clearText(){
-    
+    table.
 }
